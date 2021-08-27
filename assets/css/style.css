@@ -1,0 +1,439 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color:#333;
+  padding: 0%;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+}
+/* полосочка разграничитель */
+hr {
+  display: block;
+  margin: 40px 0;
+  border: 0;
+  background-color: #e5e5e5;
+  height: 1px;
+  width: 100%;
+}
+
+/* контейнер интро */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* интро */
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/intro.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* заголовок welcome to mogo */
+.intro__title {
+  font-size: 150px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:#fff;
+  line-height: 1;
+}
+.intro__title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+  margin: 60px auto 60px;
+
+}
+.intro__suptitle {
+  font-family: "Kaushan Script", cursive;
+  color:#fff;
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+/* отделить блок заголовка и уменьшить его */
+.intro__inner {
+  width: 100%;
+  max-width: 880px;
+  margin:0 auto;
+  text-align: center;
+
+}
+
+
+
+
+/* шапка навигации */
+header {
+  position: absolute;/*прижали к верху */
+  top:0;
+  left:0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  padding-top: 30px;
+}
+/* логотип шапки */
+.header__logo {
+  font-size: 30px;
+  font-weight: 700;
+  color:#fff;
+}
+/* навигация в шапке */
+.nav {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* навигация шапки ссылки */
+.nav__link {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  text-decoration: none;
+  margin: 10px;
+  color:#fff;
+  transition: color .2s linear;
+}
+/* полосочка под навигацией */
+.nav__link:after {
+  content:"";
+  width: 100%;
+  display: block;
+  height: 3px;
+  background-color:#fce38a;
+  position: absolute;
+  bottom:0%;
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+/* желтеет при наведении навигация */
+.nav__link:hover {
+  color: #fce38a;
+}
+/* появляется полосочка при наведении */
+.nav__link:hover:after {
+  opacity:1;
+}
+.nav__link.active {
+  color: #fce38a;
+  opacity: 1;
+}
+.nav__link.active:after{
+  opacity: 1;
+}
+/* флексим голо и навигацию */
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* кнопка learn more */
+.btn {
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+
+  display: inline-block;
+  vertical-align: top;
+  border: 3px solid white;
+  padding: 8px 30px;
+}
+/* навекдение на кнопку */
+.btn:hover {
+  background-color: #fff;
+  color:#333;
+  transition: background-color 0.3s linear;
+}
+  /* контейнер слайдера для позиционирования его внизу экрана */
+.slider {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+/* контейнер для позиционирования слайдеровских элементов */
+.slider__inner {
+  display: flex;
+  justify-content: space-between;
+}
+/* сам элемент слайдера */
+.slider__item {
+  width: 23%;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  text-transform: uppercase;
+  padding: 20px 0;
+  border-top: 3px solid white;
+  opacity: .7;
+}
+/* при наведении проявляется */
+.slider__item.active{
+  opacity: 1;
+}
+/* первый элемент красная полосочка */
+.slider__item.active:after {
+  content:'';
+  display: block;
+  width: 25%;
+  height: 3px;
+  background-color:red;
+  position:absolute;
+  bottom:100%;
+  z-index:1;
+}
+.slider__item b {
+  font-size: 24px;
+}
+
+
+/*  section*/
+.section {
+  padding:80px 0px;
+}
+.section--devices {
+  padding-bottom: 0px;
+  background: url(/assets/images/images/devices/images/bg\ devices.jpg) center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  padding-bottom: 0px;
+}
+.section--services {
+  padding-top: 120px;
+}
+/* контейнер шапки секции */
+.section__header {
+  width: 100%;
+  max-width: 950px;
+  margin:0 auto 40px;
+  text-align: center;
+}
+/* надзаголовок */
+.section__suptitle {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+}
+/* заголовок */
+.section__title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* нижняя полосочка красная */
+.section__title:after {
+  content:"";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin:30px auto;
+  background-color:red;
+}
+.section__text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  color: #b6b6b6;
+}
+
+/* секция фоток  */
+.about {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+/* блок о нас вкл картинку, бэк и набпись внутри блока */
+.about__item {
+  width: 379px;
+  background-color: #95e1d3;
+  position: relative;
+}
+/* блок картинки в этаутас */
+.about__img {
+  background: linear-gradient(to bottom, #f38181,#fce38a);
+}
+/* стили картинки в о нас */
+.about__img img {
+  display: block;
+  transition: opacity 0.1s linear;
+} 
+/* при наведении отводится фотография от блока */
+.about__item:hover .about__img {
+  transform: translate3d(-10px, -10px,0);
+  transition: transform 0.1s linear;
+}
+/* картинка опасится */
+.about__item:hover .about__img img{
+  opacity: 0.1;
+  cursor: pointer;
+}
+/* появляется иконка и текст внутри */
+.about__item:hover .about__text {
+  opacity: 1;
+}
+/* блок текста и иконки внутри с абсолютом*/
+.about__text {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  transform: translate3d(-5%, -50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+
+} 
+/* стиль супертим */
+.about__text h2 {
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+}
+/* стиль иконки внутри картинки */
+.about__text img {
+  max-width: 30px;
+  height: 30px;
+  color:#fff;
+}
+/* блок статистики цвет */
+.statistics {
+  background-color: #95e1d3;
+}
+/* флекс статистических айтемов */
+.stat {
+  display: flex;
+}
+.stat__item {
+  flex: 1 1 0;
+  padding: 70px 25px;
+  border-left: 1px solid #b5eae0;
+  text-align: center;
+  color:white;
+}
+/* стиль последнему */
+.stat__item:last-child {
+  border-right: 1px solid #b5eae0;
+}
+.stat__count {
+  font-size: 72px;
+  font-weight: 700;
+}
+.stat__text {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+/* колонки с сервисами */
+/* общий блок */
+.services {
+  display: flex;
+}
+/* один компонент универсальный */
+.services__item {
+  flex:1 1 0;
+  padding-left: 90px;
+  padding-right: 20px;
+  position: relative;
+}
+.services__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.services__text {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #999999;
+}
+.services__img {
+  position: absolute;
+  top:0;
+  left: 30px;
+}
+.devices {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.iphone {
+  position: absolute;
+  top:0;
+  left:65%;
+  transform: translate3d(0,37.5%,0);
+}
+.wedo {
+  display: flex;
+}
+.wedo__item {
+  width: 50%; /*или flex: 1 1 0*/
+}
+/* аккордион блок */
+.accordion__item {
+  border: 1px solid #e5e5e5;
+}
+.accordion__header {
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px 20px 15px 55px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.accordion__icon {
+  position: absolute;
+  top:50%;
+  left:20px;
+  z-index: 1;
+  transform:translateY(-50%);
+}
+.accordion__strelka {
+  cursor: pointer;
+}
+.accordion__content {
+  padding: 15px 60px 15px 20px;
+  color: #999999;
+  font-style: italic;
+  font-weight: 300;
+  text-align: justify;
+  display: none;
+}
+.accordion__content p {
+  margin:0;
+}
+.accordion__title {
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+.accordion__item.active 
+.accordion__content {
+display: block;
+}

@@ -211,13 +211,16 @@ header {
 }
 .section--devices {
   padding-bottom: 0px;
-  background: url(/assets/images/images/devices/images/bg.jpg) center no-repeat;
+  background: url(/assets/images/devices/bg.jpg) center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   padding-bottom: 0px;
 }
 .section--services {
   padding-top: 120px;
+}
+.section--gray {
+  background-color: #f8f8f8;
 }
 /* контейнер шапки секции */
 .section__header {
@@ -387,16 +390,23 @@ header {
 }
 .wedo {
   display: flex;
+  align-items:center
+}
+.wedo__item .man{
+  max-width: 100%;
 }
 .wedo__item {
   width: 50%; /*или flex: 1 1 0*/
+  display: flex;
+  align-items:center;
 }
 /* аккордион блок */
 .accordion__item {
   border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
 }
 .accordion__header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid transparent;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -406,6 +416,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 
 }
 .accordion__icon {
@@ -436,4 +447,186 @@ header {
 .accordion__item.active 
 .accordion__content {
 display: block;
+}
+.accordion__item.active .accordion__header {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion__item:last-child {
+  margin-bottom: none;
+}
+
+
+/* reviews */
+.reviews {
+  display: flex;
+  align-items:center;
+}
+.reviews__item {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.reviews__text {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 24px;
+  font-style: italic;
+  color: #cccccc;
+  padding: 0px 0px 0px 60px;
+}
+.reviews__text p {
+  margin: 0;
+}
+.reviews__author {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  color:black;
+  /* position: relative; */
+  /* padding-left: 70px; */
+ 
+}
+/* .reviews__author:after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 4px;
+  border-top:3px solid #f38181;
+  position: absolute;
+  top:50%;
+  left:0;
+  transform: translate3d(0, -50%,0);
+} */
+.reviews__author:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 3px;
+  margin-right: 10px;
+  background-color:red;
+}
+.reviews__bottom {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+} 
+.reviews__bottom--prev {
+  transform: rotate(-90deg);
+  margin-left: 22px;
+  margin-right: 70px;
+}
+.reviews__bottom--next {
+  transform: rotate(90deg);
+  margin-right: 22px;
+  margin-left: 70px;
+}
+
+
+/* блок мужиков */
+/* секция фоток  */
+.card {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+/* блок о нас вкл картинку, бэк и набпись внутри блока */
+.card__item {
+  width: 379px;
+  background-color: #95e1d3;
+  position: relative;
+}
+/* блок картинки в этаутас */
+.card__img {
+  background: linear-gradient(to bottom, #f38181,#fce38a);
+}
+/* стили картинки в о нас */
+.card__img img {
+  display: block;
+  transition: opacity 0.1s linear;
+} 
+/* при наведении отводится фотография от блока */
+.card__item:hover .card__img {
+  transform: translate3d(-10px, -10px,0);
+  transition: transform 0.1s linear;
+}
+/* картинка опасится */
+.card__item:hover .card__img img{
+  opacity: 0.1;
+  cursor: pointer;
+}
+/* появляется иконка и текст внутри */
+.card__item:hover .card__text {
+  opacity: 1;
+}
+/* блок текста и иконки внутри с абсолютом*/
+.card__text {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  transform: translate3d(-5%, -50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+
+} 
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.social__item{
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  color: #f38181;
+  padding:12px  10px;
+  line-height: 1;
+  font-size: 30px;
+  border-right:1px solid #f38181;
+  text-decoration: none;
+  background-color: #fce38a;
+  transition: background-color 0.1s linear;
+  transition: color 0.1s linear;
+}
+.social__item:last-child {
+  border-right: none;
+}
+.social__item:hover {
+  background-color: #f38181;
+  color: white;
+}
+.card__name {
+  position: absolute;
+  bottom: -60px;
+  left: 35%;
+  z-index: 10;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+}
+.card__fullname {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.card__emlo {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 14px;
+  font-style: italic;
+  color: #cccccc;
+}
+.card__name--second {
+  left: 25%;
+}
+.logos {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
 }

@@ -211,7 +211,7 @@ header {
 }
 .section--devices {
   padding-bottom: 0px;
-  background: url(/assets/images/devices/bg.jpg) center no-repeat;
+  background: url(../images/devices/bg.jpg) center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   padding-bottom: 0px;

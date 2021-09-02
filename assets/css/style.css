@@ -223,7 +223,7 @@ header {
   background-color: #f8f8f8;
 }
 .section--clients {
-  background:url(../images/ourwork/bg\ clients.jpg) center no-repeat;
+  background:url(../images/ourwork/bgclients.jpg) center no-repeat;
   background-size:cover;
   -webkit-background-size: cover;
   padding: 108px 80px 20px 80px;

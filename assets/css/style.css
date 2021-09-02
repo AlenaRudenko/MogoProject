@@ -211,7 +211,7 @@ header {
 }
 .section--devices {
   padding-bottom: 0px;
-  background: url(../assets/images/devices/bg.jpg) center no-repeat;
+  background: url(../images/devices/bg.jpg) center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   padding-bottom: 0px;
@@ -222,6 +222,12 @@ header {
 .section--gray {
   background-color: #f8f8f8;
 }
+.section--clients {
+  background:url(../images/ourwork/bg\ clients.jpg) center no-repeat;
+  background-size:cover;
+  -webkit-background-size: cover;
+  padding: 108px 80px 20px 80px;
+} 
 /* контейнер шапки секции */
 .section__header {
   width: 100%;
@@ -634,7 +640,7 @@ display: block;
 
 /* колоки работ */
 .works {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -650,25 +656,24 @@ display: block;
 }
 .works__info {
   position: absolute;
+  width: 100%;
+  text-align: center;
   z-index: 5;
   top: 50%;
-  left: 35%;
+  left: 0%;
   transform: translate3d(0%, -50%, 0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   opacity: 0;
   transition: opacity 0.2s linear;
 }
 .works__title {
-  padding-top: 20px;
+  margin-top: 10px;
+  margin-bottom:10px;
   font-size: 14px;
   text-transform: uppercase;
   color:white;
 }
 .works__subtitle {
-  padding-top: 10px;
+  margin-bottom: 10px;
   color:white;
   font-family: "Roboto";
   font-size: 15px;
@@ -678,6 +683,8 @@ display: block;
 }
 .works__man img {
   display: block;
+  max-width: 100%;
+  height: auto;
   transition: opacity 0.1s linear;
 }
 .works__item:hover .works__man img {
@@ -686,4 +693,50 @@ display: block;
 .works__item:hover .works__info{
   opacity: 1;
 }
+.clients {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
 
+}
+.clients__item {
+  padding: 0px 45px 0px 178px;
+  width: 50%;
+  text-align:left;
+  position: relative;
+  margin-bottom: 70px;
+}
+.clients__image {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 5%;
+
+}
+.clients__name {
+  text-transform: uppercase;
+}
+.clients__job {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 40px;
+}
+.clients__job::before {
+  content:'';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin:30px 0px;
+  /* transform: translateY(36px); */
+  width: 60px;
+  border-bottom:4px solid #f38181; 
+}
+.clients__text {
+  color:#999999;
+  font-family: "Roboro", sans-serif;
+  font-size: 15px;
+}

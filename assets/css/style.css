@@ -222,6 +222,10 @@ header {
 .section--gray {
   background-color: #f8f8f8;
 }
+.section--map {
+  background: url(../images/footer/mapbg.jpg) center no-repeat;
+  background-size:cover;
+} 
 .section--clients {
   background:url(../images/ourwork/bgclients.jpg) center no-repeat;
   background-size:cover;
@@ -760,14 +764,14 @@ display: block;
   left: -15px;
   background-color:#95e1d3;
 }
-.blog__calendar .No {
+.blog__calendar .blog__day {
   display: block;
   font-size: 30px;
   font-weight: 700;
   line-height: 1.0;
   color:white;
 }
-.blog__calendar .month {
+.blog__calendar .blog__month {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 300;
@@ -820,4 +824,191 @@ display: block;
 }
 .blogs__views img {
   padding-right: 6px;
+}
+.container__map {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container__map::before {
+  content:"";
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  background-color: #f38181;
+  top: 90px; 
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.footer::before {
+  content:"";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top:105%;
+  height: 0.3px;
+  background-color:#e5e5e5;
+}
+.footer__item {
+  width: 30%;
+}
+.footer__item--first {
+  width: 40%;
+  margin-right: 30px;
+}
+.footer__title {
+  font-size: 46px;
+  font-weight: 700;
+  color:#cccccc;
+  text-align:justify
+}
+.footer__links {
+  display: flex;
+  align-items: center;
+  margin: 37px 0px;
+  position: relative;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: italic;
+  color:#999999;
+}
+.footer__links::before {
+  content:"";
+  position: absolute;
+  z-index: 5;
+  display: inline-block;
+  width: 100%;
+  top: -20px;
+  left: 0;
+  height: 0.3px;
+  background-color:#e5e5e5;
+  height: 0.3px;
+  
+}
+.fab {
+  color:#95e1d3;
+}
+
+.footer__link {
+  width: 20px;
+  padding: 5px;
+  margin-right: 10px;
+  text-align: center;
+}
+.footer__link:first-child{
+  margin-left: 20px;
+}
+.fab:hover {
+  font-size: 20px;
+}
+.footer__item--first p {
+  font-family: "Roboto";
+  font-size: 15px;
+  color:#999999;
+  margin:20px 23px 50px 0px;
+}
+.footer__count {
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer__email {
+  padding: 14px;
+  color: #d9d9d9;
+  font-family: "Roboto";
+  font-style: italic;
+  font-size: 15px;
+  border:0.3px solid #999999;
+  border-right:none;
+  line-height: 1.51;
+}
+.footer__subscribe {
+  font-weight:700;
+  text-transform: uppercase;
+  color:white;
+  background-color: #95e1d3;
+  padding: 14px 33px;
+  position: absolute;
+  transition: background-color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.footer__subscribe:hover {
+  cursor: pointer;
+  background-color: #bcf5eb;
+}
+.footer__subscribe:active {
+  color:black;
+  background-color: #49c7b0;
+}
+.footer__blogsitem {
+  display: flex;
+  position: relative;
+}
+.footer__blogs {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 0px 50px 0px;
+}
+.footer__blogstext {
+  padding: 0px 40px 0px 140px;
+}
+.footer__blogtitle {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+.footer__date {
+  font-family: "Roboto";
+  font-size: 13px;
+  font-style: italic;
+  color:#acacac;
+  margin-bottom: 40px;
+}
+.footer__blogsitem img {
+  position: absolute;
+  top:10%;
+  left:0;
+  z-index: 5;
+}
+.footer__instagram {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 0px 50px 20px;
+}
+.footer__institems {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.footer__inst {
+  height: auto;
+}
+.footer__comment {
+  margin: 30px 20px;
+}
+.footer__comment a{
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  color:#acacac;
+}
+.footer__dev {
+  position: absolute;
+  z-index: 5;
+  top:107%;
+  left:40%;
+  font-weight: 500;
+}
+.footer__dev span {
+  color:#f4a4a4;
+  font-weight: 600;
 }

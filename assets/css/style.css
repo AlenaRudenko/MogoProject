@@ -29,6 +29,7 @@ hr {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0px 15px;
 }
 /* интро */
 .intro {
@@ -268,23 +269,27 @@ header {
 
 /* секция фоток  */
 .about {
-  margin-top: 80px;
+  margin: 80px -15px 0px -15px;
   display: flex;
   justify-content: space-between;
 }
 /* блок о нас вкл картинку, бэк и набпись внутри блока */
 .about__item {
-  width: 379px;
+  width: 33%;
+  height: 100%;
   background-color: #95e1d3;
   position: relative;
 }
 /* блок картинки в этаутас */
 .about__img {
+  max-width: 100%;
   background: linear-gradient(to bottom, #f38181,#fce38a);
 }
 /* стили картинки в о нас */
 .about__img img {
   display: block;
+  width: 100%;
+  height: auto;
   transition: opacity 0.1s linear;
 } 
 /* при наведении отводится фотография от блока */
@@ -543,16 +548,21 @@ display: block;
 /* блок о нас вкл картинку, бэк и набпись внутри блока */
 .card__item {
   max-width: 100%;
+  height: auto;
   background-color: #95e1d3;
   position: relative;
 }
 /* блок картинки в этаутас */
 .card__img {
   background: linear-gradient(to bottom, #f38181,#fce38a);
+  max-width: 100%;
+  height: auto;
 }
 /* стили картинки в о нас */
 .card__img img {
   display: block;
+  max-width: 100%;
+  height: auto;
   transition: opacity 0.1s linear;
 } 
 /* при наведении отводится фотография от блока */
@@ -641,6 +651,10 @@ display: block;
   display: flex;
   align-items:center;
   justify-content: space-between;
+}
+.logos__item img {
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -1011,4 +1025,60 @@ display: block;
 .footer__dev span {
   color:#f4a4a4;
   font-weight: 600;
+}
+@media (max-width: 1230px) {
+  /* intro */
+  .intro__title {
+    font-size: 120px;
+  }
+  .intro__suptitle {
+    font-size: 60px;
+  }
+  .slider__item {
+    font-size: 1.5vw;
+  }
+  .slider__item b {
+    width: 1.8vw;
+  }
+  /*  */
+}
+@media (max-width: 770px) {
+  /* intro */
+  .intro__title {
+    font-size: 80px;
+  }
+  .intro__suptitle {
+    font-size: 30px;
+  }
+  .slider__item {
+    font-size: 1.4vw;
+  }
+  .slider__item b {
+    font-size: 1.8vw;
+  }
+  .section {
+    padding: 40px 0px;
+  }
+}
+@media (max-width:575px) {
+  /* intro */
+  .intro__title {
+    font-size: 30px;
+  }
+  .intro__suptitle {
+    font-size: 22px;
+  }
+  .slider__item {
+    font-size: 1.2vw;
+  }
+  /* section titles, suptitles */
+  .section__suptitle {
+    font-size: 20px;
+  }
+  .section__title {
+    font-size: 24px;
+  }
+  .section__title::after {
+    margin:20px auto;
+  }
 }

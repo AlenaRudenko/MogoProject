@@ -367,13 +367,18 @@ header {
 /* общий блок */
 .services {
   display: flex;
+  flex-wrap: wrap;
 }
 /* один компонент универсальный */
 .services__item {
-  flex:1 1 0;
-  padding-left: 90px;
-  padding-right: 20px;
+  width: 33%;
+  padding: 0px 20px 30px 90px;
   position: relative;
+  margin-bottom: 30px;
+}
+.services__item--border {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
 }
 .services__title {
   text-transform: uppercase;
@@ -397,6 +402,10 @@ header {
   justify-content: center;
   position: relative;
 }
+.devices img {
+  max-width: 100%;
+  height: auto;
+}
 .iphone {
   position: absolute;
   top:0;
@@ -405,15 +414,19 @@ header {
 }
 .wedo {
   display: flex;
-  align-items:center
+  align-items:center;
+  margin: 0px -15px;
 }
-.wedo__item .man{
+.man{
+  display: block;
   max-width: 100%;
+  height: auto;
 }
 .wedo__item {
   width: 50%; /*или flex: 1 1 0*/
   display: flex;
   align-items:center;
+  padding: 0px 15px;
 }
 /* аккордион блок */
 .accordion__item {
@@ -547,21 +560,20 @@ display: block;
 }
 /* блок о нас вкл картинку, бэк и набпись внутри блока */
 .card__item {
-  max-width: 100%;
+  width: 33%;
   height: auto;
   background-color: #95e1d3;
   position: relative;
 }
 /* блок картинки в этаутас */
 .card__img {
+  display: block;
   background: linear-gradient(to bottom, #f38181,#fce38a);
-  max-width: 100%;
-  height: auto;
 }
 /* стили картинки в о нас */
 .card__img img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   transition: opacity 0.1s linear;
 } 
@@ -583,10 +595,9 @@ display: block;
 .card__text {
   position: absolute;
   z-index: 5;
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
   top: 50%;
-  left:20%;
   text-align: center;
   transform: translate3d(-5%, -50%, 0);
   display: flex;
@@ -598,17 +609,18 @@ display: block;
 
 } 
 .social {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 
 }
 .social__item{
+  width: 100%;
   width: 55px;
   height: 55px;
   text-align: center;
   color: #f38181;
-  padding:12px  10px;
+  padding:10px  10px;
   line-height: 1;
   font-size: 30px;
   border-right:1px solid #f38181;
@@ -625,13 +637,13 @@ display: block;
   color: white;
 }
 .card__name {
+  width: 100%;
   position: absolute;
   bottom: -60px;
-  left: 35%;
   z-index: 10;
   display: flex;
-  align-items:center;
   flex-direction: column;
+  align-items: center;
 }
 .card__fullname {
   text-transform: uppercase;
@@ -643,9 +655,6 @@ display: block;
   font-size: 14px;
   font-style: italic;
   color: #cccccc;
-}
-.card__name--second {
-  left: 25%;
 }
 .logos {
   display: flex;
@@ -760,7 +769,7 @@ display: block;
 /* our blog */
 .blogs {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .blogs__item {
   width: 380px;
@@ -919,7 +928,7 @@ display: block;
 .footer__link:first-child{
   margin-left: 20px;
 }
-.fab:hover {
+.footer__link:hover {
   font-size: 20px;
 }
 .footer__item--first p {
@@ -1044,7 +1053,7 @@ display: block;
   .stat__item {
     flex: none;
     width: 33%;
-    padding:30px 0px;
+    padding:10px 0px;
     border: none;
   }
   .stat__item:last-child {
@@ -1054,6 +1063,10 @@ display: block;
     flex-wrap: wrap;
     justify-content: center;
   }
+  /* цитата */
+  .reviews__text  {
+    font-size:20px;
+  }
 }
 
 
@@ -1061,7 +1074,7 @@ display: block;
 
 
 
-
+/* планшет */
 @media (max-width: 770px) {
   /* intro */
   .intro__title {
@@ -1070,11 +1083,11 @@ display: block;
   .intro__suptitle {
     font-size: 30px;
   }
-  .slider__item {
-    font-size: 1.4vw;
+  .slider__item span {
+    font-size: 10px;
   }
   .slider__item b {
-    font-size: 1.8vw;
+    font-size: 5vw;
   }
   .section {
     padding: 40px 0px;
@@ -1094,6 +1107,52 @@ display: block;
   .about__item:last-child {
     margin-bottom: 0;
   }
+  /* green statistics */
+  .stat__item {
+    padding:5px 0px;
+    border: none;
+  }
+  /* services */
+  .services__item {
+    width: 50%;
+  } 
+  .services__item--border{
+    border: none;
+  } 
+  .devices {
+    max-width: 320px;
+  }
+  .section--devices {
+    padding-bottom: 0px;
+  }
+  .iphone {
+    max-width: 100%;
+    width: 220px;
+    top: -20%;
+    left: 55%;
+    transform: translate3d(0,50.5%,0);
+  }
+  /* wedo */
+  .wedo__item--man {
+    display: none;
+  }
+  .wedo__item {
+    width: 100%;
+  }
+  /* cards */
+  .card__name {
+    bottom: -40px;
+  }
+  .card__fullname {
+    font-size:10px;
+  }
+  .card__emlo {
+    font-size:7px
+  }
+  /* цитата */
+  .reviews__text  {
+    font-size: 17px;
+  } 
 }
 
 
@@ -1102,8 +1161,7 @@ display: block;
 
 
 
-
-
+/* телефон */
 
 @media (max-width:575px) {
   /* intro */
@@ -1124,9 +1182,52 @@ display: block;
     font-size: 24px;
   }
   .section__title::after {
-    margin:20px auto;
+    margin: 20px auto;
   }
+  .slider__item {
+    display: flex;
+    flex-direction: column;
+  }
+  /* green statistics */
   .stat__item {
     width: 100%;
+    border-bottom: 1px solid #b5eae0;
   }
+  ..stat__item:last-child {
+    width: 100%;
+    border-bottom: none;
+  }
+   /* services */
+   .services__item {
+    width: 100%;
+    max-width: 400px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+  } 
+  .services {
+    justify-content: center;
+  }
+  .services__item--border{
+    border: none;
+  } 
+  .devices {
+    width: 300px;
+  }
+  .iphone {
+    max-width: 100%;
+    width: 180px;
+    top:0%;
+    left: 55%;
+    transform: translate3d(0,45.5%,0);
+  }
+  /* card */
+  .card {
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+  .card__item {
+    width: 100%;
+    margin:40px 0px;
+  }
+
 }

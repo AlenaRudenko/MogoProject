@@ -506,6 +506,10 @@ display: block;
 .reviews__text p {
   margin: 0;
 }
+.reviews__image {
+  width: 100%;
+  max-width: 400px;
+}
 .reviews__author {
   font-family: "Kaushan Script", cursive;
   font-size: 24px;
@@ -661,8 +665,9 @@ display: block;
   align-items:center;
   justify-content: space-between;
 }
-.logos__item img {
-  max-width: 100%;
+.logos__item {
+  width: 100%;
+  max-width: 150px;
   height: auto;
 }
 
@@ -770,6 +775,7 @@ display: block;
 .blogs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .blogs__item {
   width: 380px;
@@ -779,6 +785,10 @@ display: block;
 .blogs__image {
   position: relative;
   margin-bottom: 20px;
+}
+.blogs__image img {
+  max-width: 100%;
+  height: auto;
 }
 .blog__calendar {
   padding: 15px;
@@ -895,6 +905,7 @@ display: block;
 .footer__links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 37px 0px;
   position: relative;
   font-family: "Roboto";
@@ -940,6 +951,9 @@ display: block;
 .footer__count {
   font-weight: 700;
   font-size: 18px;
+}
+.footer__input {
+  width: 100%;
 }
 .footer__email {
   padding: 14px;
@@ -1005,12 +1019,18 @@ display: block;
   padding: 10px 0px 50px 20px;
 }
 .footer__institems {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .footer__inst {
+  width: 33%;
+  height: auto;
+  margin-bottom: 2px;
+}
+.footer__inst img {
+  display: block;
+  max-width:100%;
   height: auto;
 }
 .footer__comment {
@@ -1035,6 +1055,10 @@ display: block;
   color:#f4a4a4;
   font-weight: 600;
 }
+
+
+
+
 @media (max-width: 1230px) {
   /* intro */
   .intro__title {
@@ -1066,6 +1090,42 @@ display: block;
   /* цитата */
   .reviews__text  {
     font-size:20px;
+  }
+   /* цитата */
+   .reviews__image  {
+     display: flex;
+     justify-content: center;
+   }
+   .reviews__image img {
+    width: 150px;
+    height: 150px;
+  }
+  .reviews__text  {
+    font-size: 17px;
+    padding-left: 90px;
+  } 
+  .blogs__item {
+    width: 33%;
+  }
+  .footer {
+    flex-wrap: wrap;
+  }
+  .footer__item--first {
+    width: 100%;
+  }
+  .footer--blog {
+    width: 50%;
+  }
+  .footer--inst {
+    width: 50%;
+  }
+  .footer__inst {
+    width: auto;
+    margin-right: 2px;
+  }
+  .footer__institems {
+    justify-content: flex-start;
+
   }
 }
 
@@ -1126,11 +1186,10 @@ display: block;
     padding-bottom: 0px;
   }
   .iphone {
-    max-width: 100%;
-    width: 220px;
+    width: 70%;
     top: -20%;
     left: 55%;
-    transform: translate3d(0,50.5%,0);
+    transform: translate3d(0,50.5%,0)
   }
   /* wedo */
   .wedo__item--man {
@@ -1150,12 +1209,72 @@ display: block;
     font-size:7px
   }
   /* цитата */
+  .reviews__image img {
+    width: 150px;
+    height: 150px;
+  }
   .reviews__text  {
-    font-size: 17px;
+    font-size: 16px;
+    padding: 20px 0px 0px 0px;
   } 
+  .reviews__author {
+    font-size: 20px;
+  }
+  .reviews__item {
+    flex-direction: column;
+  }
+  .reviews a{
+    margin: 20px 20px;
+  }
+  .logos__item {
+    max-width: 33.3%;
+    display: flex;
+    justify-content: center;
+  }
+  .logos {
+    flex-wrap: wrap;
+  }
+  .logos__item img {
+    max-width: 100%;
+  }
+  /* много картинок */
+  .works {
+    flex-wrap: wrap;
+  }
+  .works__col {
+    width: 50%;
+  }
+  .works__man img {
+    width: 100%;
+  }
+  .footer--blog {
+    width: 100%;
+  }
+  .footer--inst {
+    width: 100%;
+  }
 }
 
 
+@media (max-width:990px) {
+  .section--clients {
+    padding: 20px 0px;
+  }
+  .clients {
+    width: 600px;
+    margin:0 auto;
+  }
+  .clients__item {
+    width: 100%;
+  }
+  .blogs {
+    max-width: 375px;
+    margin:0 auto;
+  }
+  .blogs__item {
+    width: 100%;
+  }
+}
 
 
 
@@ -1193,7 +1312,7 @@ display: block;
     width: 100%;
     border-bottom: 1px solid #b5eae0;
   }
-  ..stat__item:last-child {
+  .stat__item:last-child {
     width: 100%;
     border-bottom: none;
   }
@@ -1207,16 +1326,21 @@ display: block;
   .services {
     justify-content: center;
   }
+  .services__item {
+    padding-left: 40px;
+  }
+  .services__item img {
+    top: 5px;
+    left:0px;
+  }
   .services__item--border{
     border: none;
   } 
   .devices {
-    width: 300px;
+    max-width: 300px;
   }
   .iphone {
-    max-width: 100%;
-    width: 180px;
-    top:0%;
+    top:-20%;
     left: 55%;
     transform: translate3d(0,45.5%,0);
   }
@@ -1229,5 +1353,86 @@ display: block;
     width: 100%;
     margin:40px 0px;
   }
+  .reviews a {
+    margin: 60px 0px;
+  }
+  .reviews {
+    display:flex;
+    align-items: flex-start;
+  }
+  .logos {
+    flex-wrap: wrap;
+  }
+  .logos__item {
+    max-width: 50%;
+  }
+  .logos__item img {
+    max-width: 100%;
+  }
+  .works {
+    flex-wrap: wrap;
+  }
+  .works__col {
+    flex: none;
+    width: 100%;
+  }
+  .clients__image {
+    position: static;
+  }
+  .clients__item {
+    padding: 0;
+  }
+  .clients {
+    width: 100%;
+  }
+  .blog__calendar {
+    left:0;
+  }
+}
 
+
+
+
+
+@media (max-width:400px) {
+  .iphone {
+    left: 40%;
+    transition: left 1s linear;
+  }
+  .footer__input {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer__subscribe {
+    position: absolute;
+    top: 28.5%;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+  .footer__email {
+    position: relative;
+    display:flexbox;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .footer__blogsitem {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer__blogsitem img {
+    position: static;
+  }
+  .footer__blogstext {
+    padding: 0;
+  }
+  .footer__blogs {
+    padding: 20px 0px 20px 0px;
+  }
+  .footer__instagram {
+    padding: 20px 0px 20px 0px;
+  }
+  .footer__dev {
+    left: 0;
+  }
 }

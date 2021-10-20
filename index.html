@@ -18,24 +18,24 @@
   <title>MOGO</title>
 </head>
 <body>
-  <header class='header'>
+  <header class='header' id="header">
     <div class="container">
       <div class="header__inner">
         <div class="header__logo">MoGo</div>
         <nav class="nav">
-          <a class="nav__link active" href="#">About</a>
+          <a class="nav__link active" href="#" data-scroll="#about">About</a>
           <a class="nav__link" href="#">Service</a>
           <a class="nav__link" href="#">Work</a>
           <a class="nav__link" href="#">Blog</a>
           <a class="nav__link" href="#">Contact</a>
         </nav>
-        <div class="nav__toggle">
-          <span class="nav__toggle__item"></span>
-        </div>
+        <button class="nav__toggle">
+          <span class="nav__toggle__item">Menu</span>
+        </button>
       </div>
     </div>
   </header>
-  <div class="intro">
+  <div class="intro" id="intro">
     <div class="container">
       <div class="intro__inner">
         <h2 class="intro__suptitle">Creative Template</h2>
@@ -56,7 +56,7 @@
     </div>
   </div>
   <!-- story about us -->
-  <section class="section">
+  <section class="section" id="#about">
     <div class="container">
       <div class="section__header">
         <h3 class="section__suptitle">What we do</h3>
@@ -690,5 +690,8 @@
       </div>
     </div>
   </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
 </body>
 </html>
